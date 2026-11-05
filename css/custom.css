@@ -50,8 +50,37 @@
 }
 
 /* 导航栏浮在上层 */
-#page-header #nav {
+/* #page-header #nav {
   position: relative;
   z-index: 2;
+} */
+
+/* 导航栏半透明 */
+#page-header.nav-fixed #nav {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
 }
 
+/* 暗色模式适配 */
+[data-theme="dark"] #page-header.nav-fixed #nav {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* 页脚深蓝色 */
+#footer {
+  background: #12355b;
+  color: #c9d6e8;
+}
+
+/* 页脚里的链接和文字统一颜色 */
+#footer a,
+#footer .footer-separator,
+#footer .copyright,
+#footer .framework-info,
+#footer .statistics {
+  color: #c9d6e8;
+}
+
+#footer a:hover {
+  color: #ffffff;
+}
